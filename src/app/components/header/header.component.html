@@ -1,0 +1,17 @@
+<div class="header-container">
+  <div class="header-title-wrapper container-fluid row">
+    <div class="header-title-container col-8 left-side">
+      <!-- <div class="logo-box"></div> -->
+      <h1>{{i18n("title")}}</h1>
+    </div>
+    <div class="header-buttons-container col-4 right-side">
+      <button *ngFor="let btn of headerConfig.navBtns"
+      (click)="onNavBtnClick(btn.urlPath)" mat-button class="header-button">
+        {{btn.label}}
+        <ng-container *ngIf="btn.icon && btn.icon !== 'none'">
+          <mat-icon>{{btn.icon}}</mat-icon>
+        </ng-container>
+      </button>
+    </div>
+  </div>
+</div>

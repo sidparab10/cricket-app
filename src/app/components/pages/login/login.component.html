@@ -1,0 +1,54 @@
+<div class="login-container container-fluid">
+  <div class="login-register-form col-4">
+    <div class="form-container">
+      <fieldset>
+        <legend>
+          <label>{{isLoginForm() ? i18n("loginRegister.formTitle.login") : i18n("loginRegister.formTitle.register")}}</label>
+        </legend>
+
+        <ng-container *ngFor="let input of loginConfig.formInputs">
+          <ng-container *ngIf="input.type === 'input'">
+            <mat-form-field *ngIf="input.formType === 'both' || input.formType === formType">
+              <mat-label>{{input.label}}</mat-label>
+              <input matInput autocomplete="{{input.autocomplete}}" 
+              type="{{input.inputType}}"
+              placeholder="{{input.placeholder}}">
+            </mat-form-field>
+          </ng-container>
+
+          <ng-container *ngIf="input.type === 'multi'">
+            <div class="input-row">
+              <ng-container *ngFor="let subInput of input.inputs">
+                <mat-form-field *ngIf="subInput.formType === 'both' || subInput.formType === formType">
+                <mat-label>{{subInput.label}}</mat-label>
+                <input matInput autocomplete="{{subInput.autocomplete}}" 
+                type="{{subInput.inputType}}"
+                placeholder="{{subInput.placeholder}}">
+              </mat-form-field>
+              </ng-container>
+            </div>
+          </ng-container>
+        </ng-container>
+        
+        <div class="submit-btn-container">
+          <button color="primary" mat-stroked-button>
+            {{isLoginForm() ? i18n("loginRegister.formBtns.login") : i18n("loginRegister.formBtns.register")}}
+          </button>
+          <div class="forget-password-container" *ngIf="isLoginForm()">
+            <a>{{i18n('loginRegister.formBtns.forgetBtn')}}</a>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="form-route-link">
+      {{isLoginForm() ? 
+            i18n('loginRegister.formRouting.registerForm') :
+            i18n('loginRegister.formRouting.loginForm')}}
+      <a (click)="toggleForm()">
+        {{isLoginForm() ? 
+            i18n('loginRegister.formRouting.registerFormLink') :
+            i18n('loginRegister.formRouting.loginFormLink')}}
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="dashboard-container">
+  <div class="banner-container">
+    <div class="banner-image">
+      <div class="navbar-container">
+        <button *ngFor="let btn of dashboardConfig.navBtns" mat-stroked-button
+          class="header-button">
+          {{btn.label}}
+          <ng-container *ngIf="btn.icon && btn.icon !== 'none'">
+            <mat-icon>{{btn.icon}}</mat-icon>
+          </ng-container>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="statistics-container">
+    <div *ngFor="let stat of dashboardConfig.statistics" 
+      class="stat-box {{stat.type}}-container">
+      <div class="stat-label">
+        <div class="icon">
+          <mat-icon>{{stat.icon}}</mat-icon>
+        </div>
+        <div class="label">
+          {{stat.label}}
+        </div>
+      </div>
+      <div class="stat-value">{{stat.value}}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+{
+  "title": "Dream 11",
+  "common": {
+     
+  },
+  "loginRegister": {
+    "formRouting": {
+      "registerForm": "Don't have an account?",
+      "registerFormLink": "Sign up",
+      "loginForm": "Already have an account?",
+      "loginFormLink": "Sign in"
+    },
+    "formTitle": {
+      "login": "Login",
+      "register": "Register"
+    },
+    "formBtns": {
+      "login": "Login",
+      "register": "Register",
+      "forgetBtn": "Forget Password?"
+    }
+  }
+}

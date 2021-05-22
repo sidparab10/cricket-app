@@ -1,0 +1,122 @@
+{
+  "common": {
+
+  },
+  "header": {
+    "navBtns": [{
+        "type": "home",
+        "label": "Home",
+        "urlPath": "home"
+      },
+      {
+        "type": "login",
+        "label": "Login",
+        "icon": "account_circle",
+        "urlPath": "login"
+      }
+    ]
+  },
+  "login": {
+    "formInputs": [{
+        "type": "multi",
+        "inputs": [{
+            "formType": "register",
+            "type": "input",
+            "inputType": "text",
+            "label": "First Name",
+            "placeholder": "First Name",
+            "clsName": "firstName",
+            "autocomplete": "off"
+          },
+          {
+            "formType": "register",
+            "type": "input",
+            "inputType": "text",
+            "label": "Last Name",
+            "placeholder": "Last Name",
+            "clsName": "lastName",
+            "autocomplete": "off"
+          }
+        ]
+      },
+      {
+        "formType": "both",
+        "type": "input",
+        "inputType": "text",
+        "label": "Username",
+        "placeholder": "Username",
+        "clsName": "username",
+        "autocomplete": "off"
+      },
+      {
+        "formType": "register",
+        "type": "input",
+        "inputType": "email",
+        "label": "Email",
+        "placeholder": "Email",
+        "clsName": "email",
+        "autocomplete": "off"
+      },
+      {
+        "formType": "both",
+        "type": "input",
+        "inputType": "password",
+        "label": "Password",
+        "placeholder": "Password",
+        "clsName": "password",
+        "autocomplete": "off"
+      },
+      {
+        "formType": "register",
+        "type": "input",
+        "inputType": "password",
+        "label": "Confirm Password",
+        "placeholder": "Confirm Password",
+        "clsName": "confirmPassword",
+        "autocomplete": "off"
+      }
+    ]
+  },
+  "dashboard": {
+    "statistics": [
+      {
+        "type": "course-completion",
+        "label": "Course Completed",
+        "value": 10,
+        "icon": "library_books"
+      },
+      {
+        "type": "test-completion",
+        "label": "Test Completed",
+        "value": 4,
+        "icon": "assignment_turned_in"
+      },
+      {
+        "type": "points-earned",
+        "label": "Points Earned",
+        "value": 2,
+        "icon": "grade"
+      },
+      {
+        "type": "badges-earned",
+        "label": "Badges Earned",
+        "value": 8,
+        "icon": "favorite"
+      }
+    ],
+    "navBtns": [
+      {
+        "label": "Courses"
+      },
+      {
+        "label": "Reports"
+      },
+      {
+        "label": "Practice"
+      },
+      {
+        "label": "Account"
+      }
+    ]
+  }
+}

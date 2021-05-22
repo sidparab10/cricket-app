@@ -1,0 +1,16 @@
+.app-body-container {
+  .header-wrapper {
+    position: relative;
+  }
+
+  .body-container {
+    display: flex;
+    min-height: calc(100vh - 54px);
+
+    .body-wrapper {
+      padding: 10px;
+      background-color: #eee;
+      width: 100%;
+    }
+  }
+}

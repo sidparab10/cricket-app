@@ -1,0 +1,35 @@
+.header-container {
+  border-bottom: 2px solid var(--secondary);
+  margin: 0;
+  padding-left: 0;
+  background-color: var(--primary);
+
+  .header-title-wrapper {
+    .header-title-container {
+      display: flex;
+      align-items: center;
+      padding-left: 5px;
+
+      // .logo-box {
+      //   background-image: url('./../../../assets/images/logo.png');
+      // }
+
+      h1 {
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        margin: 10px;
+        font-weight: 500;
+        color: var(--cyan);
+      }
+    }
+
+    .header-buttons-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 0;
+      color: var(--cyan);
+    }
+  }
+}
