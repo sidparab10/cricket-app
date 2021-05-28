@@ -1,15 +1,25 @@
 <div class="sidebar-container" [ngClass]="{'hide-sidebar': !showSidebar}">
   <div class="sidebar-btn-container">
-    <button mat-icon-button (click)="onSidebarBtn()">
+    <button class="sidebar-action-btn" mat-icon-button (click)="onSidebarBtn()">
       <mat-icon>menu</mat-icon>
     </button>
   </div>
   <div class="siderbar-wrapper" *ngIf="showSidebar">
-    <div>asdakjsd</div>
-    <div>asdakjsd</div>
-    <div>asdakjsd</div>
-    <div>asdakjsd</div>
-    <div>asdakjsd</div>
+    <div class="side-btn-wrapper" *ngFor="let sideBtn of sidebarConfig.sideBtns">
+      <button class="side-btn {{sideBtn.type}}">
+        <div class="icon" *ngIf="!!sideBtn.icon">
+          <mat-icon>{{sideBtn.icon}}</mat-icon>
+        </div>
+        <div class="label">{{sideBtn.label}}</div>
+      </button>
+    </div>
+  </div>
+  <div class="min-siderbar-wrapper" *ngIf="!showSidebar">
+    <div class="side-btn-wrapper" *ngFor="let sideBtn of sidebarConfig.sideBtns">
+      <button class="side-btn {{sideBtn.type}}">
+        <mat-icon>{{sideBtn.icon}}</mat-icon>
+      </button>
+    </div>
   </div>
 </div>
 <!-- <div class="disabled-overlay" [ngClass]="{'hide-overlay': !showSidebar}"></div> -->

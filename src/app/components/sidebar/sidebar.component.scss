@@ -1,16 +1,17 @@
 .sidebar-container {
   box-sizing: border-box;
-  border-right: 1px solid var(--primary);
+  border-right: 2px solid var(--secondary);
   height: 100%;
   width: 250px;
   transition: 1s ease;
-  background: var(--primary);
-  
+  background: var(--dark);
+
   &.hide-sidebar {
-    width: 40px;
+    width: 62px;
     transition: 1s ease;
-    
-    .siderbar-wrapper  {
+    padding: 0 5px;
+
+    .siderbar-wrapper {
       transition: 1ms ease;
       transition-delay: 3s;
       display: none;
@@ -19,13 +20,67 @@
 
   .sidebar-btn-container {
     text-align: right;
+
+    .sidebar-action-btn {
+      width: 50px;
+    }
   }
-  
+
   .siderbar-wrapper {
     transition: 1ms ease;
     transition-delay: 3s;
     display: flex;
     flex-direction: column;
     padding: 10px;
+
+    .side-btn-wrapper {
+      margin-bottom: 5px;
+
+      .side-btn {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid var(--secondary);
+        padding: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: flex;
+        align-items: center;
+
+        .icon {
+          margin-right: 5px;
+          width: 50px;
+        }
+
+        &:hover {
+          background: var(--secondary);
+          color: var(--white);
+          box-shadow: 0px 0px 1px 1px #000;
+        }
+      }
+    }
+  }
+
+  .min-siderbar-wrapper {
+    .side-btn-wrapper {
+      margin-bottom: 5px;
+
+      .side-btn {
+        padding: 5px;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid var(--secondary);
+        // width: 50px;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:hover {
+          background: var(--secondary);
+          color: var(--white);
+          box-shadow: 0px 0px 1px 1px #000;
+        }
+      }
+    }
   }
 }

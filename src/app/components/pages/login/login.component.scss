@@ -1,7 +1,12 @@
 .login-container {
+  height: 100%;
+  align-items: center;
+  display: flex;
+
   .login-register-form {
     margin: auto;
-    max-width: 500px;
+    max-width: 550px;
+    min-width: 450px;
 
     .form-container {
       padding: 20px;

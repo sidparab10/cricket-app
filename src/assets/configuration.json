@@ -16,6 +16,35 @@
       }
     ]
   },
+  "sidebar": {
+    "sideBtns": [
+      {
+        "label": "Admin Tasks",
+        "type": "admin-tasks",
+        "icon": "computer"
+      },
+      {
+        "label": "Create Team",
+        "type": "create-team",
+        "icon": "add"
+      },
+      {
+        "label": "Create Match",
+        "type": "create-match",
+        "icon": "add"
+      },
+      {
+        "label": "Declare the winner",
+        "type": "declare-winner",
+        "icon": "star"
+      },
+      {
+        "label": "Manage Users",
+        "type": "manage-users",
+        "icon": "apps"
+      }
+    ]
+  },
   "login": {
     "formInputs": [{
         "type": "multi",

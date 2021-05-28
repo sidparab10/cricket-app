@@ -46,37 +46,14 @@
       max-width: 450px;
       margin: auto;
       width: 100%;
-      transition: 0.5s;
-      background-image: linear-gradient(to right,
-          hsl(211, 100%, 50%),
-          hsl(179, 100%, 30%));
-      position: relative;
+      transition: 1s;
+      background: transparent;
 
-      &::before {
-        position: absolute;
-        content: "";
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-image: linear-gradient(to bottom,
-            hsl(344, 100%, 50%),
-            hsl(31, 100%, 40%));
-        z-index: -1;
-        transition: opacity 0.5s linear;
-        opacity: 0;
+      &:hover {
+        background-color: var(--secondary);
+        color: var(--white);
+        transition: 1s;
       }
-
-      &:hover::before {
-        opacity: 1;
-      }
-
-
-      // &:hover {
-      //   background-color: var(--secondary);
-      //   color: var(--white);
-      //   transition: 0.5s;
-      // }
 
       .stat-label {
         display: flex;

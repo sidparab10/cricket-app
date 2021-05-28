@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ConfigurationService } from 'src/app/services/configuration.service';
+import { SidebarModel } from './sidebar.component.model';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,8 +8,8 @@ import { ConfigurationService } from 'src/app/services/configuration.service';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  sidebarConfig = {};
-  showSidebar = false;
+  sidebarConfig = new SidebarModel();
+  showSidebar = true;
 
   constructor(
     private configService: ConfigurationService
@@ -20,6 +21,12 @@ export class SidebarComponent implements OnInit {
 
   onSidebarBtn() {
     this.showSidebar = !this.showSidebar;
+  }
+
+  getShortLabel(label: string) {
+    return label.split(" ").map((word)=>{
+      return word.charAt(0).toUpperCase();
+    }).join("");
   }
 
 }
