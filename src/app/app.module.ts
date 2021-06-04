@@ -12,6 +12,8 @@ import { MaterialModule } from './material/material.module';
 import { LoginComponent } from './components/pages/login/login.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CreateTeamComponent } from './components/sidebar/buttons/create-team/create-team.component';
+import { CreateMatchComponent } from './components/sidebar/buttons/create-match/create-match.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     DashboardComponent,
     LoginComponent,
-    SidebarComponent
+    SidebarComponent,
+    CreateTeamComponent,
+    CreateMatchComponent
   ],
   imports: [
     BrowserModule,

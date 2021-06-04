@@ -2,13 +2,21 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 :root {
-    --primary: #95e7e6;
-    --secondary: #00c6c5;
+  --primary: #95e7e6;
+  --secondary: #00c6c5;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-*{
-    user-select: none;
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+* {
+  user-select: none;
 }
 

@@ -9,7 +9,13 @@
   &.hide-sidebar {
     width: 62px;
     transition: 1s ease;
-    padding: 0 5px;
+
+    .sidebar-btn-container {
+      // .sidebar-action-btn {
+      //   width: 100%;
+      // }
+      text-align: center;
+    }
 
     .siderbar-wrapper {
       transition: 1ms ease;
@@ -23,6 +29,7 @@
 
     .sidebar-action-btn {
       width: 50px;
+      color: var(--secondary);
     }
   }
 
@@ -32,54 +39,34 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-
-    .side-btn-wrapper {
-      margin-bottom: 5px;
-
-      .side-btn {
-        width: 100%;
-        background: transparent;
-        border: none;
-        border-bottom: 2px solid var(--secondary);
-        padding: 5px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: flex;
-        align-items: center;
-
-        .icon {
-          margin-right: 5px;
-          width: 50px;
-        }
-
-        &:hover {
-          background: var(--secondary);
-          color: var(--white);
-          box-shadow: 0px 0px 1px 1px #000;
-        }
-      }
-    }
   }
 
-  .min-siderbar-wrapper {
-    .side-btn-wrapper {
-      margin-bottom: 5px;
+  .side-btn-wrapper {
+    margin-bottom: 5px;
 
-      .side-btn {
-        padding: 5px;
-        background: transparent;
-        border: none;
-        border-bottom: 2px solid var(--secondary);
-        // width: 50px;
-        width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
+    .side-btn {
+      color: var(--gray);
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid var(--secondary);
+      padding: 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-        &:hover {
-          background: var(--secondary);
-          color: var(--white);
-          box-shadow: 0px 0px 1px 1px #000;
-        }
+      .icon {
+        margin-right: 5px;
+        width: 50px;
+      }
+
+      &:hover {
+        background: var(--secondary);
+        color: var(--white);
+        box-shadow: 0px 0px 1px 1px #000;
+        border-color: var(--white);
       }
     }
   }

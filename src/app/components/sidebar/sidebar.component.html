@@ -6,7 +6,7 @@
   </div>
   <div class="siderbar-wrapper" *ngIf="showSidebar">
     <div class="side-btn-wrapper" *ngFor="let sideBtn of sidebarConfig.sideBtns">
-      <button class="side-btn {{sideBtn.type}}">
+      <button (click)="onSideBtnClick(sideBtn.type)" class="side-btn {{sideBtn.type}}">
         <div class="icon" *ngIf="!!sideBtn.icon">
           <mat-icon>{{sideBtn.icon}}</mat-icon>
         </div>
@@ -16,7 +16,8 @@
   </div>
   <div class="min-siderbar-wrapper" *ngIf="!showSidebar">
     <div class="side-btn-wrapper" *ngFor="let sideBtn of sidebarConfig.sideBtns">
-      <button class="side-btn {{sideBtn.type}}">
+      <button (click)="onSideBtnClick(sideBtn.type)" [matTooltip]="sideBtn.label" matTooltipPosition="right"
+        class="side-btn {{sideBtn.type}}">
         <mat-icon>{{sideBtn.icon}}</mat-icon>
       </button>
     </div>

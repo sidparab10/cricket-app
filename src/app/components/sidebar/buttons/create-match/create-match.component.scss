@@ -1,11 +1,11 @@
-.login-container {
+.create-team-container {
   height: 100%;
   // align-items: center;
   // display: flex;
 
-  .login-register-form {
+  .create-team-form {
     margin: auto;
-    max-width: 550px;
+    //   max-width: 550px;
     min-width: 450px;
 
     .form-container {
@@ -24,10 +24,19 @@
           padding: 0 10px;
           color: var(--secondary);
         }
-      }
 
-      .input-row {
-        display: flex;
+        .team-sections {
+          display: flex;
+          gap: 20px;
+
+          .section {
+            width: 100%;
+
+            .section-title {
+              text-align: center;
+            }
+          }
+        }
       }
 
       .mat-form-field {
@@ -35,30 +44,12 @@
       }
 
       .submit-btn-container {
+        text-align: center;
+
         button {
-          width: 100%;
           color: var(--secondary);
         }
-
-        .forget-password-container {
-          margin-top: 10px;
-        }
       }
-    }
-  }
-
-  .form-route-link {
-    margin-top: 10px;
-    text-align: right;
-  }
-
-  a {
-    color: var(--gray);
-    cursor: pointer;
-    text-decoration: underline;
-
-    &:hover {
-      color: var(--purple);
     }
   }
 }

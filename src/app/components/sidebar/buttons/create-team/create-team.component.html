@@ -1,0 +1,59 @@
+<div class="create-team-container container-fluid">
+  <div class="create-team-form col-5">
+    <div class="form-container">
+      <fieldset>
+        <legend>
+          <label>{{i18n("createTeam.title")}}</label>
+        </legend>
+
+        <ng-container *ngFor="let input of formInputs; let idx = index">
+          <ng-container *ngIf="input.layoutType === 'input'">
+            <div class="form-input" [ngClass]="{'add-checkbox-input': input.addCheckbox}">
+              <ng-container *ngIf="input.addCheckbox">
+                <section class="add-checkbox-container">
+                  <mat-checkbox (change)="changeCheckboxStatus(idx)" class="add-checkbox">{{input.checkboxLabel}}
+                  </mat-checkbox>
+                </section>
+              </ng-container>
+              <ng-container *ngIf="input.inputType === 'file'; else noFile">
+                <label class="file-input-box"
+                  [ngClass]="{'disabled-input': input.addCheckbox && !input.checkboxStatus}">
+                  <mat-icon class="icon">attach_file</mat-icon>
+                  <span class="label">{{input.label}}</span>
+                  <input class="file-input" type="file" placeholder="{{input.placeholder}}"
+                    [disabled]="input.addCheckbox && !input.checkboxStatus">
+                </label>
+              </ng-container>
+              <ng-template #noFile>
+                <mat-form-field>
+                  <mat-label>{{input.label}}</mat-label>
+                  <input matInput autocomplete="{{input.autocomplete}}" type="{{input.inputType}}"
+                    placeholder="{{input.placeholder}}">
+                </mat-form-field>
+              </ng-template>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="input.layoutType === 'multi'">
+            <div class="multi-form-input">
+              <div class="input-row">
+                <ng-container *ngFor="let subInput of input.inputs">
+                  <mat-form-field>
+                    <mat-label>{{subInput.label}}</mat-label>
+                    <input matInput autocomplete="{{subInput.autocomplete}}" type="{{subInput.inputType}}"
+                      placeholder="{{subInput.placeholder}}">
+                  </mat-form-field>
+                </ng-container>
+              </div>
+            </div>
+          </ng-container>
+        </ng-container>
+
+        <div class="submit-btn-container">
+          <button (click)="addTeam()" color="primary" mat-stroked-button>
+            {{i18n("createTeam.createBtn")}}
+          </button>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</div>

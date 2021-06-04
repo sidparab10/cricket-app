@@ -1,11 +1,11 @@
-.login-container {
+.create-team-container {
   height: 100%;
   // align-items: center;
   // display: flex;
 
-  .login-register-form {
+  .create-team-form {
     margin: auto;
-    max-width: 550px;
+    //   max-width: 550px;
     min-width: 450px;
 
     .form-container {
@@ -26,6 +26,36 @@
         }
       }
 
+      .form-input {
+        &.add-checkbox-input {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+
+      .file-input-box {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--secondary);
+        border-color: var(--secondary);
+        cursor: pointer;
+
+        &.disabled-input {
+          cursor: default;
+          color: var(--gray);
+          border-color: var(--gray);
+        }
+
+        .file-input {
+          display: none;
+        }
+      }
+
       .input-row {
         display: flex;
       }
@@ -39,26 +69,7 @@
           width: 100%;
           color: var(--secondary);
         }
-
-        .forget-password-container {
-          margin-top: 10px;
-        }
       }
-    }
-  }
-
-  .form-route-link {
-    margin-top: 10px;
-    text-align: right;
-  }
-
-  a {
-    color: var(--gray);
-    cursor: pointer;
-    text-decoration: underline;
-
-    &:hover {
-      color: var(--purple);
     }
   }
 }

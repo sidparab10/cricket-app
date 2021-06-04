@@ -147,5 +147,71 @@
         "label": "Account"
       }
     ]
+  },
+  "create-team": {
+    "formInputs": [
+      {
+        "label": "Team Name",
+        "type": "team-name",
+        "layoutType": "input",
+        "placeholder": "Team Name",
+        "inputType": "text",
+        "autocomplete": "off"
+      },
+      {
+        "label": "Select Logo File",
+        "type": "add-logo",
+        "layoutType": "input",
+        "inputType": "file",
+        "accept": "image/*",
+        "addCheckbox": true,
+        "checkboxLabel": "Add logo",
+        "checkboxStatus": false
+      },
+      {
+        "label": "Points",
+        "type": "points",
+        "layoutType": "input",
+        "placeholder": "Team Points",
+        "inputType": "number",
+        "autocomplete": "off"
+      }
+    ]
+  },
+  "create-match": {
+    "formInputs": {
+      "sections": [
+        {
+          "label": "Team 1",
+          "inputs": {
+            "label": "Select team 2",
+            "type": "select-team-2",
+            "optionList": [
+              "asasd",
+              "aqywehbq",
+              "asasd",
+              "aqywehbq",
+              "asasd",
+              "aqywehbq"
+            ]
+          }
+        },
+        {
+          "label": "Team 2",
+          "inputs": {
+            "label": "Select team 2",
+            "type": "select-team-2",
+            "optionList": [
+              "asasd",
+              "aqywehbq",
+              "asasd",
+              "aqywehbq",
+              "asasd",
+              "aqywehbq"
+            ]
+          }
+        }
+      ]
+    }
   }
 }

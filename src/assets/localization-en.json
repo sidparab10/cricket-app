@@ -1,5 +1,5 @@
 {
-  "title": "Dream 11",
+  "title": "Meow",
   "common": {
      
   },
@@ -19,5 +19,13 @@
       "register": "Register",
       "forgetBtn": "Forget Password?"
     }
+  },
+  "createTeam": {
+    "title": "Create Team",
+    "createBtn": "Create Team"
+  },
+  "createMatch": {
+    "title": "Create Match",
+    "createBtn": "Create Match"
   }
 }
